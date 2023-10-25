@@ -7,5 +7,15 @@
 </head>
 <body>
     <h1>Things I need to do:</h1>
+    <table>
+        <!-- For loop iterates through items, note syntax -->
+        {% for item in items %}
+            <tr>
+                <!-- template variable syntax used to render items from the dictionary created in views.py -->
+                <td>{{ item.name }}</td>
+                <td>{{ item.done }}</td>
+            </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
