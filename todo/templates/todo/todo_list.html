@@ -11,10 +11,16 @@
         <!-- For loop iterates through items, note syntax -->
         {% for item in items %}
             <tr>
-                <!-- template variable syntax used to render items from the dictionary created in views.py -->
+            {% if item.done %}
+            <!-- template variable syntax used to render items from the dictionary created in views.py -->
+                <td><strike>{{ item.name }}</strike></td>
+            {% else %}
                 <td>{{ item.name }}</td>
-                <td>{{ item.done }}</td>
+            {% endif %}
             </tr>
+            <!-- When there are no items in the database this code will display -->
+        {% empty %}
+        <tr><td>You have nothing to do.</td></tr>
         {% endfor %}
     </table>
 </body>
