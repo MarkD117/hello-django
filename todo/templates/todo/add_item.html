@@ -13,21 +13,9 @@
         to guarantee that the data we're posting is actually coming from our
         todo list app and not from another website. -->
         {% csrf_token %}
-        <div>
-            <p>
-                <label for="id_name">Name: </label>
-                <!-- The name attribute of this input is the name we'll use to access
-                the input's value in our view function. The ID attribute is the 
-                way that we can identify it on the page to apply its label CSS and so on. -->
-                <input type="text" name="item_name" id="id_name">
-            </p>
-        </div>
-        <div>
-            <p>
-                <label for="id_done">Done: </label>
-                <input type="checkbox" name="done" id="id_done">
-            </p>
-        </div>
+        <!-- rendering form from forms.py. Using the Django form built-in method
+        .as_p to display the form as paragraps -->
+        {{ form.as_p }}
         <div>
             <p>
                 <button type="submit">Add Item</button>
