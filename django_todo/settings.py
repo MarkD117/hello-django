@@ -30,8 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-markd117-hellodjango-t3mwrohj3t7.ws-eu105.gitpod.io',
-                 'https://mjd8780-django-todo-app-4deab618c381.herokuapp.com/']
+ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
 
 # Application definition
