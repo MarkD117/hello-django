@@ -30,7 +30,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-markd117-hellodjango-t3mwrohj3t7.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['8000-markd117-hellodjango-t3mwrohj3t7.ws-eu105.gitpod.io',
+                 'https://git.heroku.com/mjd8780-django-todo-app.git']
 
 
 # Application definition
