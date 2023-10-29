@@ -20,7 +20,7 @@ development = os.environ.get('DEVELOPMENT', False)
 if os.path.isfile('env.py'):
     import env
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
